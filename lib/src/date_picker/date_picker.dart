@@ -13257,8 +13257,7 @@ String _getMonthHeaderText(
           '${DateRangePickerHelper.getHijriMonthText(middleDate, localizations, monthTextFormat)} ${middleDate.year}';
     } else {
       text =
-          '${DateFormat(monthTextFormat, locale.toString()).format(middleDate)}'
-          ' ${middleDate.year}';
+          DateFormat(monthTextFormat, locale.toString()).format(middleDate);
     }
 
     /// To restrict the double header when the number of weeks in view given
@@ -13280,7 +13279,7 @@ String _getMonthHeaderText(
         return '$text - ${DateRangePickerHelper.getHijriMonthText(middleDate, localizations, monthTextFormat)} ${middleDate.year}';
       } else {
         // ignore: lines_longer_than_80_chars
-        return '$text - ${DateFormat(monthTextFormat, locale.toString()).format(middleDate)} ${middleDate.year}';
+        return '$text - ${DateFormat(monthTextFormat, locale.toString()).format(middleDate)}';
       }
     }
 
